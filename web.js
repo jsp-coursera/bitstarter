@@ -8,9 +8,9 @@ app.get('/', function(request, response) {
 
 //if (err) { response.send ('error thrown!'); }
 //response.send(html); 
-fs.writeFileSync('index.html','Hello node',function (err) {
+fs.writeFileSync('index.html','Hello node',function (err,data) {
 if(err) throw err;
-response.send();
+response.send(data);
 });
 //  response.send('Hello World2!');
 });
