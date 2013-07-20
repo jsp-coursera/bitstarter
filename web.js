@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 
-fs.readFile('index.html','utf8',function(err,data) {
+fs.readFile('/index.html','utf8',function(err,data) {
 
 if (err) { return response.send(err); }
 response.send(data);
