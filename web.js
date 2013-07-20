@@ -4,7 +4,7 @@ var fs=require('fs');
 var htmlfile="index.html";
 app.get('/', function(request, response) {
 
-var html=fs.readFileSync(htmlfile,'utf-8',function(err,data).toString();
+var html=fs.readFileSync(htmlfile).toString();
 
 //if (err) { response.send ('error thrown!'); }
 response.send(html); 
