@@ -10,7 +10,8 @@ app.get('/', function(request, response) {
 fs.readFileSync('index.html',function(err,data) {
 
 if (err) { return response.send(err); }
-response.send('data');
+data1=data.toString();
+response.send(data1);
 });
 
 
