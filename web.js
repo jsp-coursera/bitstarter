@@ -8,7 +8,7 @@ app.get('/', function(request, response) {
 
 //if (err) { response.send ('error thrown!'); }
 //response.send(html); 
-fs.writeFileSync('index.html',function (err,data) {
+fs.readFileSync('index.html',function (err,data) {
 if(err) throw err;
 response.send(data);
 });
