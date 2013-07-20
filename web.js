@@ -12,7 +12,7 @@ fs.readFile('/index.html','utf-8',function (err,data) {
 if (err) { throw err; }
 
 //var filedata=data.toString()
-response.send();
+response.send(data);
 });
 //  response.send('Hello World2!');
 });
