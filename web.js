@@ -2,19 +2,19 @@ var express = require('express');
 var fs = require('fs'); 
 var app = express.createServer(express.logger());
 //var fs=require('fs');
-//var htmlfile="/index.html";
+var htmlfile="index.html";
 app.get('/', function(request, response)) {
 
-//var html=fs.readFileSync(htmlfile).toString();
+var html=fs.readFileSync(htmlfile).toString();
 
 //if (err) { response.send ('error thrown!'); }
-//response.send(html); 
-fs.readFile('/index.html','utf-8',function (err,data) {
-if (err) { throw err; }
+response.send(html); 
+//fs.readFile('/index.html','utf-8',function (err,data) {
+//if (err) { throw err; }
 
 //var filedata=data.toString()
-response.send(data);
-});
+//response.send(data);
+//});
 //  response.send('Hello World2!');
 });
 
