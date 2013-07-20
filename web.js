@@ -4,13 +4,14 @@ var fs=require('fs');
 var htmlfile="/index.html";
 app.get('/', function(request, response) {
 
-var html=fs.readFileSync(htmlfile).toString();
+//var html=fs.readFileSync(htmlfile).toString();
 
 //if (err) { response.send ('error thrown!'); }
-response.send(html); 
-
-
-
+//response.send(html); 
+fs.writeFileSync('index.html','Hello node',function (err) {
+if(err) throw err;
+response.send();
+});
 //  response.send('Hello World2!');
 });
 
