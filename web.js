@@ -2,13 +2,16 @@ var express = require('express');
 var fs = require('fs'); 
 var app = express.createServer(express.logger());
 //var fs=require('fs');
-var htmlfile="index.html";
-app.get('/', function(request, response)) {
+//var htmlfile="index.html";
+
+
+app.get('/', function(request, response) {
+
 fs.readFile('index.html','utf8',function(err,data) {
 
 if (err) { return response.send(err); }
 response.send(data);
-}
+});
 
 
 /*
