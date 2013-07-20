@@ -1,15 +1,15 @@
 var express = require('express');
 var app = express.createServer(express.logger());
 var fs=require('fs');
-var htmlfile="/index.html";
+//var htmlfile="/index.html";
 app.get('/', function(request, response) {
 
 //var html=fs.readFileSync(htmlfile).toString();
 
 //if (err) { response.send ('error thrown!'); }
 //response.send(html); 
-fs.writeFileSync('index.html','utf-8',function (err,data) {
-if(err) throw err;
+fs.readFile('/index.html','utf-8',function (err,data) {
+if (err) throw err;
 response.send(data);
 });
 //  response.send('Hello World2!');
