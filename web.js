@@ -9,8 +9,10 @@ app.get('/', function(request, response) {
 //if (err) { response.send ('error thrown!'); }
 //response.send(html); 
 fs.readFile('/index.html','utf-8',function (err,data) {
-if (err) throw err;
-response.send(data.toString());
+if (err) { throw err; }
+
+//var filedata=data.toString()
+response.send();
 });
 //  response.send('Hello World2!');
 });
