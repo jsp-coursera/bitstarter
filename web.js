@@ -4,7 +4,7 @@ var fs=require('fs');
 
 app.get('/', function(request, response) {
 
-fs.writeFileSync('./index.html','Hello node',function(err,data) {
+fs.readFileSync('./index.html','utf-8',function(err,data) {
 if (err) { response.send ('error thrown!'); }
 response.send(data); 
 }
