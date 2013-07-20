@@ -10,9 +10,9 @@ app.get('/', function(request, response) {
 //response.send(html); 
 fs.readFile('/index.html','utf-8',function (err,data) {
 if (err) throw err;
-//response.send(data);
+response.send(data.toString());
 });
-  response.send('Hello World2!');
+//  response.send('Hello World2!');
 });
 
 var port = process.env.PORT || 5000;
