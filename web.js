@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express.createServer(express.logger());
 var fs=require('fs');
-
+var htmlfile="index.html";
 app.get('/', function(request, response) {
 
-fs.readFileSync('./index.html','utf-8',function(err,data) {
-if (err) { response.send ('error thrown!'); }
-response.send(data); 
-}
+var html=fs.readFileSync(htmlfile,'utf-8',function(err,data).toString();
+
+//if (err) { response.send ('error thrown!'); }
+response.send(html); 
+
 
 
 //  response.send('Hello World2!');
