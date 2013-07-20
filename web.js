@@ -4,14 +4,14 @@ var fs = require('fs');
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-/*
-fs.readFileSync('./index.html','utf-8',function(err,data) {
+
+fs.writeFileSync('./index.html','Hello node',function(err,data) {
 if (err) { response.send ('error thrown!'); }
 response.send(data); 
 }
 
-*/
-  response.send('Hello World2!');
+
+//  response.send('Hello World2!');
 });
 
 var port = process.env.PORT || 5000;
